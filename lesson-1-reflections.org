@@ -44,6 +44,8 @@ The staging area allows Git to work with the files that we're thinking of commit
 This is useful when large groups are using git to collaborate. We could all "branch" from the master to work on adding our feature, without writing to the main body. If you are the only one working on a project this would be useful for trying out diferent features or if you had two different possible architectures for the code and you weren't sure which would end up working better.
 **** How do the diagrams help you visualize the branch structure
 They help you identify where what features the program you are working on has versus the master. They can also help you see what versions your collaborators are working with as well.
+**** What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+When you merge two branches together you combine the code from both of the branches into one file. This allows you to incorportate features that you working on in a different branch back into the master branch. We represent it in the diagram as coming together because because you are absorbing one branch into the other one, but when you check the log all of the individual commits are there from both branches.
 ** git commands
 - git diff [old commit] [new commit] <- runs diff on git commit versions
 - git diff <- with no arguments shows the difference between the working directory and staging area
@@ -59,3 +61,6 @@ They help you identify where what features the program you are working on has ve
 - git commit <- writes to your git repository
 - git branch <- shows branches
   - git branch easy-mode <- creates a new branch called "easy-mode"
+    - git branch -d [branch] <- deletes branch name, not commits
+- git merge [branch1] <- merges the current branch with branch 1
+- git show [commit] <- shows you the difference between a file and it's parent, cleaner to use than git diff.
