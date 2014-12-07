@@ -42,13 +42,17 @@ The staging area allows Git to work with the files that we're thinking of commit
 
 **** What are some situations when branches would be helpful in keeping your history organized? How would branches help?
 This is useful when large groups are using git to collaborate. We could all "branch" from the master to work on adding our feature, without writing to the main body. If you are the only one working on a project this would be useful for trying out diferent features or if you had two different possible architectures for the code and you weren't sure which would end up working better.
+**** How do the diagrams help you visualize the branch structure
+They help you identify where what features the program you are working on has versus the master. They can also help you see what versions your collaborators are working with as well.
 ** git commands
 - git diff [old commit] [new commit] <- runs diff on git commit versions
 - git diff <- with no arguments shows the difference between the working directory and staging area
 - git diff --staged <- shows the changes between staging area and the commit
 - git reset --hard <- resets changes from the last commit in working directory, this cannot be undone
 - git log --stat <- gives you basic information on changes you've made from commit to commit
+  - git log --graph --online [commit1] [commit2] <- gives you visual representation of commits to different branches. If you don't include '--oneline' it gives you something that's fairly difficult to visualize 
 - git checkout [commit] <- this opens up an old git commit so you can check to see if there's a bug
+  - git checkout -b new-branch- <- creates a new branch so you can track your changes in your git log
 - git init <- creates a new git repository
 - git status <- shows which files have changed since the last commit
 - git add <- adds file to "the staging area" to be committed
