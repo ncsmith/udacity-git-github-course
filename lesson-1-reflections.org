@@ -39,12 +39,19 @@ I would like to be able to sucessfully use this as I develop programs and data a
 You make a .git file which has metadata about your commits and version information. Initially there are commits. You need to do it so that way Git has information on the directory and is aware that it will be operating with in it.
 **** How is the staging area different from the working directory and the repository? What value do you think it offers?
 The staging area allows Git to work with the files that we're thinking of commiting without touching the local files until you're ready. This allows you to control how much you're committing at once and protects your system.
+
+**** What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+This is useful when large groups are using git to collaborate. We could all "branch" from the master to work on adding our feature, without writing to the main body. If you are the only one working on a project this would be useful for trying out diferent features or if you had two different possible architectures for the code and you weren't sure which would end up working better.
 ** git commands
 - git diff [old commit] [new commit] <- runs diff on git commit versions
+- git diff <- with no arguments shows the difference between the working directory and staging area
+- git diff --staged <- shows the changes between staging area and the commit
+- git reset --hard <- resets changes from the last commit in working directory, this cannot be undone
 - git log --stat <- gives you basic information on changes you've made from commit to commit
 - git checkout [commit] <- this opens up an old git commit so you can check to see if there's a bug
 - git init <- creates a new git repository
 - git status <- shows which files have changed since the last commit
 - git add <- adds file to "the staging area" to be committed
-
-
+- git commit <- writes to your git repository
+- git branch <- shows branches
+  - git branch easy-mode <- creates a new branch called "easy-mode"
