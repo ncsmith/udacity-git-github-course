@@ -1,0 +1,50 @@
+This file contains notes for the Git class on udacity.com
+
+* 20141126
+** Lesson 1
+- Started out with an intro on why you would use version control
+*** Diff command
+The diff command is a command line tool to find the differences between 2 files
+- in the terminal navigate to the directroy that has the files you wan to compare then type
+$ diff -u <name of old file here> <name of new file here> # -u is unified diff format
+- in the output "+" indicates an added line "-" indicates a deleted line
+- the output will only show the differences
+
+*** When to commit
+- The rule of thumb given is for each logical change.
+- so if you fix a buggy function that's one commit
+- if you fix multiple bugs in the same function that's one commt
+- If you work on a function for an hour or so, there's probably a logical change as to when to commit there.
+*** Reflections
+**** How did viewing a diff between two versions of a file help you see the bug that was introdruced
+It highlighted the lines that had been changed between the 2 files allowing me to see the typo
+**** How could have easy access to the entire history of a file make you a more efficient programmer in the long term?
+- If the probram had been edited by multiple people it could help you track who added what to ask questions
+- It could show you how you had developed algorithims
+- It can bring you back to working versions of the program after you have "broken" it
+**** What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved like Google docs does?
+The pro of having to choose when to commit is that you keep your version history clean, only commiting at logical spots when you have made a significant change that works. The con vs automatically saved docs is that it relies on the user to make the commits, opening up the potential to losing work.
+**** Why do you think some version control systems, like Git, allow multiple files in one commit, while others, like Google Docs, treat each file separately?
+git is a system that is built for programmers, who often use separate files for functions and features whereas Google Docs is an office suite that is used for single files that are not interdependent on each other.
+**** How can you use the commands git log and git diff to view the history of files?
+-git diff allows you to see the difference between 2 commits by using the command under the "git commands" bullet point
+- git log shows you a history of the commits that have been made to the file. This is where you'll get the commit information that you supply to git diff
+**** How might using version control make you more confident to make changes that could break something?
+Knowing that you can go back through your commits to a working state gives you the confidence that you can always get back to at least where you were at a point when things were stable.
+**** Now that you have your workspace set up, what do you want to try using Git for?
+I would like to be able to sucessfully use this as I develop programs and data analysis algorithims
+** Lesson 2
+*** Reflections
+**** What happens when you initialize a repository? Why do you need to do it?
+You make a .git file which has metadata about your commits and version information. Initially there are commits. You need to do it so that way Git has information on the directory and is aware that it will be operating with in it.
+**** How is the staging area different from the working directory and the repository? What value do you think it offers?
+The staging area allows Git to work with the files that we're thinking of commiting without touching the local files until you're ready. This allows you to control how much you're committing at once and protects your system.
+** git commands
+- git diff [old commit] [new commit] <- runs diff on git commit versions
+- git log --stat <- gives you basic information on changes you've made from commit to commit
+- git checkout [commit] <- this opens up an old git commit so you can check to see if there's a bug
+- git init <- creates a new git repository
+- git status <- shows which files have changed since the last commit
+- git add <- adds file to "the staging area" to be committed
+
+
