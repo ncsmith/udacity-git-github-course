@@ -53,6 +53,8 @@ Pros
 Cons
 - may end up with bad code added on because if it doesn't cause a conflict it just gets added to the file
 ** Lesson 3
+**** When would you want to use a remote repository rather keeping all your work local?
+When you could be working from multiple workstations, you want offsite backup or you're collaborating with others.
 ** git commands
 - git diff [old commit] [new commit] <- runs diff on git commit versions
 - git diff <- with no arguments shows the difference between the working directory and staging area
