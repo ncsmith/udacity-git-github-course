@@ -1,6 +1,6 @@
 This file contains notes for the Git class on udacity.com
 
-* 20141126
+* 20141126 Didn't end up taking notes with date but kept this bullet point
 ** Lesson 1
 - Started out with an intro on why you would use version control
 *** Diff command
@@ -46,6 +46,13 @@ This is useful when large groups are using git to collaborate. We could all "bra
 They help you identify where what features the program you are working on has versus the master. They can also help you see what versions your collaborators are working with as well.
 **** What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
 When you merge two branches together you combine the code from both of the branches into one file. This allows you to incorportate features that you working on in a different branch back into the master branch. We represent it in the diagram as coming together because because you are absorbing one branch into the other one, but when you check the log all of the individual commits are there from both branches.
+**** What are the pros and cons of Git's automatic merging vs. always doing merges manually?
+Pros
+- Better track record when automated
+- Remove human error
+Cons
+- may end up with bad code added on because if it doesn't cause a conflict it just gets added to the file
+** Lesson 3
 ** git commands
 - git diff [old commit] [new commit] <- runs diff on git commit versions
 - git diff <- with no arguments shows the difference between the working directory and staging area
@@ -64,3 +71,10 @@ When you merge two branches together you combine the code from both of the branc
     - git branch -d [branch] <- deletes branch name, not commits
 - git merge [branch1] <- merges the current branch with branch 1
 - git show [commit] <- shows you the difference between a file and it's parent, cleaner to use than git diff.
+- git remote <- this lets you know where remotely (ie github) you will be sending your commits to.
+  - git remote add [title of project, origin by default] [git url]
+- git push [title of commit, ie origin] [branch name] <- pushes to the remote git site that is displayed in git remote
+
+
+
+
